@@ -1,0 +1,15 @@
+<!-- Herencia  -->
+{% extends 'core/base.html' %}
+
+<!-- Bloque del titulo  -->
+{% block title %}Portada{% endblock %} 
+
+<!-- Bloque de la imagen de fondo. Importacion de carpeta "static" -->
+{% block background %}{% load static %}{% static 'core/img/home-bg.jpg' %}{% endblock %}
+
+<!--  Bloque del header   -->
+{% block headers %}
+<h1>Franco Peralta</h1>
+<span class="subheading">Desarrollador Web - Full Stack - Senior of Seniors</span>
+{% endblock %}
+

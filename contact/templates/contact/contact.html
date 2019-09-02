@@ -1,0 +1,28 @@
+<!-- Herencia  -->
+{% extends 'core/base.html' %}
+
+<!-- Bloque del titulo  -->
+{% block title %}Contacto{% endblock %}
+
+<!-- Bloque de la imagen de fondo. Importacion de carpeta "static"  -->
+{% block background %}{% load static %}{% static 'core/img/contact-bg.jpg' %}{% endblock %}
+
+<!--  Bloque del header   -->
+{% block headers %}
+<h1>Contacto</h1>
+<span class="subheading">Asesoría</span>
+{% endblock %}
+
+<!--  Bloque del contenido   -->
+{%block content %}
+        {% for contact in contacts %}
+                <div class="row">
+                        <div class="col-lg-8 col-md-10 mx-auto">
+                        <p><b>Contacto:</b> {{contact.name}}</p>
+                        <p><b>Dirección:</b> {{contact.address}}</p>
+                        <p><b>Teléfono:</b> {{contact.tel}}</p>
+                        <p><b>Honorarios:</b> $ {{contact.hon}}/h </p>
+                        </div>
+                </div>
+        {% endfor %}
+{% endblock %}
